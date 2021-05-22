@@ -1,0 +1,115 @@
+body
+    margin: 0
+    position: relative
+.site-header
+    display: flex
+    background: rgba(0,0,0,0.8)
+    max-width: 100%
+    align-items: center
+    justify-content: center
+    max-height: 44px
+    height: 48px
+    .main-nav
+        flex-grow: 1
+        max-width: 920px
+        margin: 0 auto
+        position: relative
+        padding-left: calc(max(22px, env(safe-area-inset-left)))
+        padding-right: calc(max(22px, env(safe-area-inset-right)))
+        ul
+            padding: 0
+            list-style-type: none
+            display: flex
+            height: 100%
+            justify-content: space-between
+            align-items: center
+
+            li
+                font-size: 14px
+                a
+                    color: #ccc
+                    text-decoration: none
+                    position: relative
+                    transition: color .3s ease
+                    &:hover
+                        color: #fff
+                    .cart-icon
+                        position: relative
+                        left: 0
+                        top: 5px
+                    img
+                        width: 17px
+    .mobile-nav
+        display: flex
+        flex-grow: 1
+        padding-left: calc(max(12px, env(safe-area-inset-left)))
+        padding-right: calc(max(12px, env(safe-area-inset-right)))
+        ul
+            display: flex
+            margin: 0
+            padding: 0
+            align-items: center
+            list-style-type: none
+            max-width: 100%
+            flex-grow: 1
+            justify-content: space-between
+
+            li
+                .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+                    background: #fff
+                    width: 25px
+                    height: 3px
+                .hamburger-inner
+                    margin-top: 0
+                .hamburger
+                    padding: 0
+                .cart-icon
+                    position: relative
+                    left: 0
+                    top: 2px
+                a
+                    img
+                        width: 17px
+.list-fade-menu
+    position: fixed
+    background: #000
+    width: 100%
+    height: 100%
+    z-index: 999
+    top: 10%
+    left: 0
+    display: flex
+    justify-content: center
+    ul
+        padding: 0
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        width: 80%
+        position: relative
+        overflow: scroll
+        height: 70vh
+        li
+            text-align: left
+            width: 100%
+            padding: 12px 0
+            border-bottom: 1px solid #ccc
+            cursor: pointer
+            a
+                color: #ccc
+                font-size: 18px
+                text-decoration: none
+                user-select: none
+
+@media screen and ( max-width: 760px )
+    .site-header
+        .main-nav
+            display: none
+        .mobile-nav
+            display: flex
+
+@media screen and ( min-width: 760px )
+    .site-header
+        .mobile-nav
+            display: none
