@@ -139,6 +139,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
 }
 
 .list-fade-menu ul {
@@ -178,6 +179,10 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.list-active {
+  display: block;
 }
 
 @media screen and (max-width: 760px) {
